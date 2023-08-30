@@ -47,8 +47,8 @@ func createMux() *echo.Echo {
 }
 
 func setupRouting(e *echo.Echo) {
-	noteHandler := injector.InjectMovieHandler()
-	handler.InitMovieRouting(e, noteHandler)
+	movieHandler := injector.InjectMovieHandler()
+	handler.InitMovieRouting(e, movieHandler)
 
 	authHandler := injector.InjectAuthHandler()
 	handler.InitAuthRouting(e, authHandler)
